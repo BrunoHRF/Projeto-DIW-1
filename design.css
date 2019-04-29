@@ -1,4 +1,16 @@
-h1,h2{
+h1{
 	font-family: 'Righteous', cursive;
-	font-size: 30px;
+	font-size: 45px;
+}
+.titulos{
+	font-family:sans-serif;
+	font-size: 25px;
+}
+th{
+	font-size: 20px;
+	font-family: sans-serif;
+}
+html{
+	background-image: url(background_3.jpg);
+	background-size: cover;
 }
