@@ -1,10 +1,16 @@
-h1{
+.Cabeçalho{
 	font-family: 'Righteous', cursive;
-	font-size: 45px;
+	font-size: 30px;
+	word-spacing: 1.5px;
 }
 .titulos{
 	font-family:sans-serif;
 	font-size: 25px;
+	text-align:center;
+}
+.Content{
+	font-size: 20px;
+	text-align: justify;
 }
 th{
 	font-size: 20px;
@@ -13,4 +19,13 @@ th{
 html{
 	background-image: url(background_3.jpg);
 	background-size: cover;
+}
+table, th, td {
+  border: 1px solid black;
+  border-spacing: 15px;
+  text-align: justify;
+}
+th{
+	height: 30px;
+	text-align: center;
 }
