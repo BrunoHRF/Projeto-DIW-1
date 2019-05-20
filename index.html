@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="design.css">
 <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-<script type="text/javascript" src="dc.js"></script>
+<script src="dbfake.js"></script>
 	<title>
 		Notícias 24 horas
 	</title>
@@ -86,7 +86,18 @@
 			<li>Diversidade como tema que será abordado por muitos artistas</li>
 			<li>Palco Perry maior e melhor</li>
 		</ol>
-
+	
+	<div id="about-us">
+		 <h1> Sobre Nós </h1>
+	</div>
+	
+	<script>
+		var equipe ="";
+		for(i=0 ; i<db.data.lenght ; i++){
+			equipe+=`Nossa equipe : ${db.data[i].Jornalista} <br>`;
+		}
+		document.getElementById("about-us").innerHTML = equipe;
+	</script>
 
 </body>
 
