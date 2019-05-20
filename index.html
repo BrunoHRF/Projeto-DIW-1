@@ -86,17 +86,17 @@
 			<li>Diversidade como tema que será abordado por muitos artistas</li>
 			<li>Palco Perry maior e melhor</li>
 		</ol>
-	
-	<div id="about-us">
+
+	<div id="Sobre">
 		 <h1> Sobre Nós </h1>
 	</div>
-	
+
 	<script>
-		var equipe ="";
-		for(i=0 ; i<db.data.lenght ; i++){
-			equipe+=`Nossa equipe : ${db.data[i].Jornalista} <br>`;
+		var equipe ='';
+		for(i=0 ; i < db.data.length ; i++){
+			equipe +=`<p>Nossa equipe : ${db.data[i].Jornalista} <br> </p>`;
 		}
-		document.getElementById("about-us").innerHTML = equipe;
+		document.getElementsById("Sobre").innerHTML = equipe;
 	</script>
 
 </body>
