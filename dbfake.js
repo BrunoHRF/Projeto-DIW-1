@@ -1,5 +1,5 @@
-var db ={ data :
-	[
+var db = {
+	data : [
 		{Jornalista : "William Bonemer Junior",
 		 Nascimento: "16 de novembro de 1963 (idade 55 anos)",
 		 Area : "Jjornalista, publicitário, apresentador e escritor brasileiro. É editor-chefe e apresentador do Jornal Nacional, da Rede Globo",
@@ -30,3 +30,5 @@ var db ={ data :
 
 	]
 }
+for(i=0;i<db.data.length;i++){
+console.log(db.data[i])}

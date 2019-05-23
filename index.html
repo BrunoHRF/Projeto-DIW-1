@@ -86,19 +86,19 @@
 			<li>Diversidade como tema que será abordado por muitos artistas</li>
 			<li>Palco Perry maior e melhor</li>
 		</ol>
-
-	<div id="Sobre">
-		 <h1> Sobre Nós </h1>
+		<h1 class="titulos"> Sobre Nós </h1>
+	<div id="lista">
 	</div>
-
 	<script>
-		let equipe =" ";
-		for(i=0 ; i < db.data.length ; i++){
-			equipe +=` Nossa equipe : ${db.data[i]}`;
-		}
-		document.getElementsById('Sobre').innerHTML = equipe;
-	</script>
-
+			let equipe =" ";
+			for(i=0 ; i < db.data.length ; i++){
+				equipe +=`<p>O jornalista : ${db.data[i].Jornalista}<br>`;
+				equipe +=` Sua história : ${db.data[i].Descrição}<br>`;
+				equipe +=` Seu cargo : ${db.data[i].Area}<br>`;
+				equipe +=`${db.data[i].Nascimento}<br>`;
+			}
+			document.getElementById('lista').innerHTML = equipe;
+		</script>
 </body>
 
 
