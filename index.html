@@ -92,11 +92,11 @@
 	</div>
 
 	<script>
-		var equipe ='';
+		let equipe =" ";
 		for(i=0 ; i < db.data.length ; i++){
-			equipe +=`<p>Nossa equipe : ${db.data[i].Jornalista} <br> </p>`;
+			equipe +=` Nossa equipe : ${db.data[i]}`;
 		}
-		document.getElementsById("Sobre").innerHTML = equipe;
+		document.getElementsById('Sobre').innerHTML = equipe;
 	</script>
 
 </body>
