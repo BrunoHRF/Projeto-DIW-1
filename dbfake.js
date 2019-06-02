@@ -14,7 +14,7 @@ var db = {
 		 Experiencia : 40
 		},
 
-		 {Jornalista : "Malu Gaspar",
+		 {Jornalista : "Maria Luíza Gaspar",
 		 Nascimento : "1974 (idade 45 anos)",
 		 Area: "Jornalista e Podcaster",
 		 Descrição : "Malu Gaspar nasceu em São Paulo (SP) e cresceu em Cruzeiro (SP). Formou-se em Jornalismo pela Universidade de São Paulo (USP), em 1995.",
@@ -30,5 +30,6 @@ var db = {
 
 	]
 }
+
 for(i=0;i<db.data.length;i++){
 console.log(db.data[i])}

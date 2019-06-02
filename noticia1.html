@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Notícia do Dia</title>
 	<link rel="stylesheet" type="text/css" href="design.css">
-<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 	<ul class="Menu">
-			<a href="#">Fale conosco</a>
-			<a href="#">Login</a>
-			<a href="noticia1.html">Nóticia</a>
-			<a href="#">Home</a>
+		<a href="#">Fale conosco</a>
+		<a href="noticia1.html">Nóticia</a>
+		<a href="index.html">Home</a>
 	</ul>
 	<div class="Cabeçalho">
 		<h1 align="center">
@@ -18,7 +18,12 @@
 			Site de notícias
 		</h1>
 	</div>
-	</head>
+	<div id="Search">
+		<textarea class="search-bar" placeholder="Pesquise as notícias"></textarea>
+	</div>
+</head>
+</head>
+
 <body>
 	<h1 class="titulos">Notícia Destaque
 	</h1>
@@ -26,19 +31,48 @@
 		<img src="https://placeimg.com/640/480/any">
 	</div>
 	<div class="content">
+		<button onclick="getData()"> News </button>
 		<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	<p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+<div class="news-api">
+
+	<script>
+
+	let req = new XMLHttpRequest ();
+
+	let url='https://newsapi.org/v2/top-headlines?country=br&apiKey=f095d06a96ad4b7096616efd9bbfd1f3';
+
+	function processaDados(){
+		let dados;
+		for(i = 0; i < dados.articles.length ; i++);{
+		saida += `<div class="content">
+					<p>${dados.articles[i]}</p>
+					<br>
+					<p>${dados.articles[i++].articles.title}</p>
+					</div>`
+		}
+		document.getElementById('notícia1').innerHTML = saida;
+	}
+
+	function getData(){
+		req.onload = processaDados;
+		req.open('GET', URL,true);
+		req.send();
+	}
+	</script>
+	</div>
 </body>
 </html>
