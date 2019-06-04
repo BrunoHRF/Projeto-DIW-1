@@ -30,8 +30,10 @@
 	<div class="capa">
 		<img src="https://placeimg.com/640/480/any">
 	</div>
-	<div class="content">
-		<button onclick="getData()"> News </button>
+	<div id="content">
+			<div id="api">
+					<button onclick="getData()"> News </button>
+			</div>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -56,20 +58,21 @@
 	let url='https://newsapi.org/v2/top-headlines?country=br&apiKey=f095d06a96ad4b7096616efd9bbfd1f3';
 
 	function processaDados(){
-		let dados;
-		for(i = 0; i < dados.articles.length ; i++);{
-		saida += `<div class="content">
+		let dados = JSON.parse(req.responseText);
+		let saida=' ';
+		for(i = 0; i < dados.articles.length ; i++){
+		 saida += `<div class="api">
 					<p>${dados.articles[i]}</p>
 					<br>
-					<p>${dados.articles[i++].articles.title}</p>
+					<p>${dados.articles[i++]}</p>
 					</div>`
 		}
-		document.getElementById('notícia1').innerHTML = saida;
+		document.getElementById('content').innerHTML = saida;
 	}
 
 	function getData(){
 		req.onload = processaDados;
-		req.open('GET', URL,true);
+		req.open('GET', url,true);
 		req.send();
 	}
 	</script>
