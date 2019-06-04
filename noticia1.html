@@ -59,20 +59,20 @@
 
 	function processaDados(){
 		let dados = JSON.parse(req.responseText);
-		let saida=' ';
-		for(i = 0; i < dados.articles.length ; i++){
+		let saida='';
+		for(i = 0; i < dados.totalResults.length; i++){
 		 saida += `<div class="api">
-					<p>${dados.articles[i]}</p>
+					<p>" Artigos ${dados.totalResults[i].articles}"</p>
 					<br>
-					<p>${dados.articles[i++]}</p>
+					<p>" Titulos : ${dados.totalResults[i].titles}"</p>
 					</div>`
 		}
-		document.getElementById('content').innerHTML = saida;
+		document.getElementById('api').innerHTML = saida;
 	}
 
 	function getData(){
 		req.onload = processaDados;
-		req.open('GET', url,true);
+		req.open('GET',url,true);
 		req.send();
 	}
 	</script>
