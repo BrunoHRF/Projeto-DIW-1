@@ -1,3 +1,6 @@
+#noticias-estado>p{
+	text-align: justify;
+}
 .Cabeçalho{
 	font-family: 'Righteous', cursive;
 	font-size: 30px;
