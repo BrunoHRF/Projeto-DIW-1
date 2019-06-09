@@ -30,6 +30,3 @@ var db = {
 
 	]
 }
-
-for(i=0;i<db.data.length;i++){
-console.log(db.data[i])}
