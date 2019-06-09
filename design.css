@@ -57,7 +57,7 @@ th{
 .titulos-noticias{
 	font-weight: bold;
 	font-family: sans-serif;
-	font-size: 18px;	
+	font-size: 18px;
 
 }
 .descricao-noticias{
@@ -87,4 +87,8 @@ th{
 	width: 100%;
 	display: block;
 	height: 200px;
+}
+.noticias:hover{
+	background-color: azure;
+	transform:scale(1.08);
 }
