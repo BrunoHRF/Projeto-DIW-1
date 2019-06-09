@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<header>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="design.css">
 		<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
@@ -10,6 +10,8 @@
 		<title>
 			Notícias 24 horas
 		</title>
+	</header>
+	<head>
 		<ul class="Menu">
 			<a href="#">Fale conosco</a>
 			<a href="noticia1.html">Notícia</a>
@@ -48,7 +50,7 @@
 			<b>
 				<p class="titulos">Nóticas do momento</p>
 			</b>
-			<!--Trazer api de notícias para Brasil-->
+			<!--Trazer api para noticias dos Estados-->
 			<div id="noticias-estado">
 				<p class="titulos">Rio de Janeiro</p>
 					<br>Temporal no Rio afeta as regiões mais afastadas. Prefeito vem a público e revela que a preparação para tempestades foi precária
@@ -57,13 +59,8 @@
 				<p class ="titulos">Minas Gerais</p>
 					<br>Governador de Minas explica crise da educação e projeta uma melhora considerável para o servidores nos próximos meses.
 			</div>
-			<!--Trazer api de notícias para Brasil-->
 			<div id="noticias-brasil">
-				<hr>
-				<p>Presidente Jair Bolsonaro juntamente com Rodrigo Maia afirmam ter crença total na aprovação da reforma no congresso, e sem ressalvas disse o presidente:"A hora de mudar é agora!".</p>
-				<p>
-					Operação Lava-Jato ganha repercusão internacional após condenação do ex Presidente Michel Temer, segue o link da notícia. <a href="">Leia mais.</a>
-				</p>
+				<!--Trazer api de notícias para destaques do Brasil-->
 			</div>
 			<hr>
 			<p class="titulos">
@@ -83,15 +80,5 @@
 				<!-- Espaço da função que trará elementos JSON-->
 			</div>
 		</div>
-		<script>
-			let equipe =" ";
-			for(i=0 ; i < db.data.length ; i++){
-				equipe +=`<p>O jornalista : ${db.data[i].Jornalista}<br>`;
-				equipe +=` Sua história : ${db.data[i].Descrição}<br>`;
-				equipe +=` Seu cargo : ${db.data[i].Area}<br>`;
-				equipe +=`${db.data[i].Nascimento}<br>`;
-			}
-			document.getElementById('lista').innerHTML = equipe;
-		</script>
 	</body>
 </html>
